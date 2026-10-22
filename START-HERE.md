@@ -22,3 +22,12 @@ This package is not production-approved and does not yet connect the landlord da
 
 ## Cloudflare Pages
 The current app is static HTML/CSS/JS: framework preset `None`, build command blank, output directory `.` when the files are at the repository root. If the files are nested inside a project subfolder, set Root directory or output directory to the folder containing `index.html`. Add the `supabase-config.js` file with public values only; do not commit any secret keys.
+
+
+## Landlord dashboard database connection (updated build)
+
+1. Keep your real `supabase-config.js` private in your local working copy. The ZIP intentionally contains placeholders. Use the project URL and public publishable/anon key only; never use the `service_role` key in browser code.
+2. In Supabase SQL Editor, run `supabase/SAFE-EXISTING-ACCOUNT-SETUP.sql` once only if the dashboard reports that your existing account has no landlord workspace. It is idempotent and does not drop tables or delete records. Verify the returned workspace row.
+3. Deploy the updated `index.html`, `auth.html`, `app.js`, and `supabase-dashboard.js` to Cloudflare Pages, while retaining your privately configured `supabase-config.js`.
+4. Sign in. The auth page now redirects to the dashboard. The dashboard reads the signed-in user's organization, properties, and units from Supabase. Add property creates a property row and unit rows.
+5. This is a first integration step, not a claim that the whole product is production-ready. Tenant, payment entry, invoice allocation, meter reading, document storage, and occupancy based on leases still require their own verified database workflows. Do not enter real financial or tenant data until those parts and RLS have been tested.

@@ -63,5 +63,13 @@
 </div>
 <div class="toast" id="toast" role="status"></div>
 <div class="modal-backdrop hidden" id="modalBackdrop"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><div><div class="eyebrow">JDS KEYHOLD</div><h2 id="modalTitle">Add property</h2></div><button class="modal-close" id="closeModal" aria-label="Close">×</button></div><form id="modalForm"><div id="modalFields"></div><div class="modal-actions"><button type="button" class="btn btn-secondary" id="cancelModal">Cancel</button><button type="submit" class="btn btn-primary" id="submitModal">Save property</button></div></form></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase-config.js"></script>
+<script>
+  if (window.JDS_SUPABASE_URL && /^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(window.JDS_SUPABASE_URL) && !/YOUR_PROJECT|YOUR_SUPABASE|placeholder/i.test(window.JDS_SUPABASE_ANON_KEY || '')) {
+    try { localStorage.setItem('jds-keyhold-demo', JSON.stringify({properties:[],payments:[]})); } catch (_) {}
+  }
+</script>
 <script src="app.js"></script>
+<script src="supabase-dashboard.js"></script>
 </body></html>
