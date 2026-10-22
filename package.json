@@ -1,0 +1,7 @@
+{
+  "name": "jds-keyhold-preview",
+  "version": "0.1.0",
+  "private": true,
+  "description": "JDS Keyhold rental management product preview",
+  "scripts": { "preview": "python -m http.server 8080" }
+}
