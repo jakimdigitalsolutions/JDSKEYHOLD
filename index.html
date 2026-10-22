@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#101b2a"><title>JDS Keyhold — Property operations, in control</title>
-<link rel="icon" href="assets/jds-logo.png"><link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/keyhold-icon.png"><link rel="stylesheet" href="styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="app-shell">
   <aside class="sidebar" id="sidebar">
-    <div class="brand"><img src="assets/jds-logo.png" alt="JDS"><div><strong>JDS <span>KEYHOLD</span></strong><small>PROPERTY OPERATIONS</small></div></div>
+    <div class="brand"><img src="assets/keyhold-icon.png" alt="JDS Keyhold"><div><strong>JDS <span>KEYHOLD</span></strong><small>PROPERTY OPERATIONS</small></div></div>
     <div class="workspace"><div class="workspace-icon">M</div><div><b>Muyenga Portfolio</b><small>Landlord workspace</small></div><span class="chevron">⌄</span></div>
     <div class="nav-label">WORKSPACE</div>
     <nav class="main-nav" aria-label="Main navigation">
@@ -28,7 +28,7 @@
   <main class="main-area">
     <header class="topbar"><button class="mobile-menu" id="menuBtn" aria-label="Open menu">☰</button><div class="breadcrumbs"><span>Workspace</span><b>/</b><strong id="crumb">Overview</strong></div><div class="top-actions"><div class="search-box"><span>⌕</span><input id="globalSearch" placeholder="Search anything..." aria-label="Search anything"><kbd>⌘ K</kbd></div><button class="icon-btn" id="notificationBtn" aria-label="Notifications">♧<i></i></button><div class="top-avatar">JK</div></div></header>
     <div class="content-wrap">
-      <div class="demo-banner"><span class="demo-dot"></span><b>Interactive preview</b><span>Sample data only — changes stay in this browser.</span><button id="resetDemo">Reset demo ↺</button><div class="role-switch"><button class="role-option selected" data-role="landlord">Landlord view</button><button class="role-option" data-role="tenant">Tenant portal</button></div></div>
+      <div class="demo-banner"><span class="demo-dot"></span><b>Interactive preview</b><span>Sample data only — changes stay in this browser.</span><a class="btn btn-secondary btn-small" href="auth.html" style="text-decoration:none">Sign in / Create account</a><button id="resetDemo">Reset demo ↺</button><div class="role-switch"><button class="role-option selected" data-role="landlord">Landlord view</button><button class="role-option" data-role="tenant">Tenant portal</button></div></div>
       <section id="landlordApp">
         <div class="page-heading"><div><div class="eyebrow">THURSDAY, 22 OCTOBER 2026</div><h1>Good afternoon, Jakim <span class="wave">✳</span></h1><p>Here's what's happening across your properties today.</p></div><div class="heading-actions"><button class="btn btn-secondary" id="exportBtn">⇩ Export report</button><button class="btn btn-primary" id="addPropertyBtn">＋ Add property</button></div></div>
         <div class="stats-grid">
